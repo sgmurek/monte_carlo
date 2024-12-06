@@ -24,6 +24,9 @@ class MonteCarloTestSuite(unittest.TestCase):
         self.Weighted_Die = mc.Die(self.Valid_Die_6_Sides.die)
         self.Weighted_Die.cheat(4, 10)
         self.assertTrue(self.Weighted_Die.characteristics()['Weight'].iloc[3] == 10)
+    
+    def test_Die_roll(self):
+        self.assertTrue(len(self.Valid_Die_6_Sides.roll(100)) ==100)
         
     def test_Die_characteristics(self):
         self.assertIsInstance(self.Valid_Die_6_Sides.characteristics(), pd.DataFrame) 
