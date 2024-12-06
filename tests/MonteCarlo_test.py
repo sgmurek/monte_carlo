@@ -115,10 +115,9 @@ class MonteCarloTestSuite(unittest.TestCase):
         self.Valid_Die_2_Sides = Die(np.arange(1, 3))
         self.Valid_Game = Game([self.Valid_Die_6_Sides, self.Valid_Die_6_Sides])
         
-        # Call play() first to set the previous_game attribute
+        # Call play()
         self.Valid_Game.play(3)
-        
-        # Now we can initialize the Analyzer, which depends on the Game's previous_game attribute
+        #initialize the Analyzer
         self.Valid_Analyzer = Analyzer(self.Valid_Game)
     
     def test_Die_init(self):
