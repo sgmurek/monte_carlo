@@ -8,6 +8,7 @@ setup(
     packages = ['montecarlo', 'tests'],
     #scripts = ['bin/script1','bin/script2'],
     url = 'https://github.com/sgmurek/monte_carlo',
+    license = 'LICENSE.txt',
     description = 'A package to create sets of dice, play games with them, and analyze the results.',
     #long_description = open('README.txt').read(),
     install_requires = [
